@@ -1,0 +1,2 @@
+Giải thích câu hỏi bẫy
+Trong container Grafana, `localhost` trỏ đến chính container Grafana, không phải container Prometheus. Docker Compose đăng ký DNS nội bộ theo tên service trong cùng network, vì vậy Grafana kết nối đến service `prometheus` bằng URL `http://prometheus:9090`.
